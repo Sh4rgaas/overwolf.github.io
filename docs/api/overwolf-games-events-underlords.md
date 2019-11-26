@@ -51,6 +51,8 @@ Data Example:
 {"info":{"match_info":{"round_type":"{"round":4,"type":"PvP"}"}},"feature":"match_info"}
 ```
 
+PVE also includes the name of the AI's you are up against.
+
 ### Events
 
 Event       | Event Data   | Fired When    | Notes              | Since GEP Ver. |
