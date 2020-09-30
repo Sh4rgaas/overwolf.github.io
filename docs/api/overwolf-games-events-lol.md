@@ -19,7 +19,6 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 
 ## Available Features
 
-* [gep_internal](#gep_internal)
 * [live_client_data](#live_client_data)
 * [matchState](#matchstate)
 * [match_info](#match_info)
@@ -43,22 +42,6 @@ Note that you can also use the LOL game launcher events. Read more [here](overwo
 ## Game events status
 
 It's highly recommended to communicate errors and warnings to your app users. Check current game event status [here](../status/all) or  easily check game event status from your app [using our API](../topics/howto-check-events-status-from-app).
-
-## `gep_internal`
-
-### Info Updates
-
-key          | Category    | Values                    | Notes                 | Since GEP Ver. |
------------- | ------------| ------------------------- | --------------------- | ------------- | 
-gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
-
-#### *gep_internal* note
-
-Data Example:
-
-```json
-{"feature":"gep_internal","category":"gep_internal","key":"version_info","value":"{"local_version":"143.0.10","public_version":"143.0.10","is_updated":true}"}
-```
 
 ## `live_client_data`
 
@@ -208,9 +191,18 @@ matchEnd   | null        |  Match has ended     |  Match is ended    |   140.0  
 
 key          | Category    | Values                    | Notes                 | Since GEP Ver. |
 ------------ | ----------- | ------------------------- | --------------------- | -------------- | 
+gep_internal | gep_internal| Local + Public version number|See [notes](#gep_internal-note)|   143.0       |
 pseudo_match_id | match_info | Current match’s ID code. Example:</br> `a4e8fc75-b35e-466f-976c-09f4ee633d95`  |  This is an Overwolf-generated code unrelated to Riot Games.  |   0.130 |
 game_mode | match_info | Whether the current game mode is TFT or default LoL. See [notes](#game_mode-notes) |                 |   133.0       |
 match_paused | match_info | Whether a match is paused or not (Bool - True/False). See [notes](#match_paused-notes) |                 |   153.1       |
+
+#### *gep_internal* note
+
+Data Example:
+
+```json
+{"info":{"gep_internal":{"version_info":"{\"local_version\":\"157.0.1\",\"public_version\":\"157.0.1\",\"is_updated\":true}"}},"feature":"gep_internal"}
+```
 
 #### *game_mode* notes
 
