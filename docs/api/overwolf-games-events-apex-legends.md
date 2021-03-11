@@ -70,7 +70,7 @@ key          | Category    | Values                    | Notes                 |
 --------------- | -----------| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------- | 
 pseudo_match_id | match_info | The current match’s ID code.</br></br>Example:</br></br> `0c0ea3df-97ea-4d3a-b1f6-f8e34042251f`  |  This is an Overwolf-generated code, unrelated to Respawn.  |   130.0 |
 game_mode      | match_info | The currently selected game mode. | See [notes](#game_mode-note) |   158.0 |
-tabs            | match_info | The current amount of squads, players, cash, and kills of the match (in relation to local player).| See [notes](#tabs-note) |   158.0 |
+tabs            | match_info | The current amount of squads, players, cash, kills, and assists of the match (in relation to local player).| See [notes](#tabs-note) |   158.0 |
 
 #### *game_mode* note
 
@@ -95,7 +95,7 @@ Note that we get these values from the game, so they might be changed from seaso
 Data Example:
 
 ```json
-{"info":{"match_info":{"tabs":"{"kills":1,"spectators":0,"teams":11,"players":30,"damage":394,"cash":0}"}},"feature":"match_info"}
+{"info":{"match_info":{"tabs":"{"kills":1, "assists":"3", "spectators":0,"teams":11,"players":30,"damage":394,"cash":0}"}},"feature":"match_info"}
 ```
 
 ## match_state
